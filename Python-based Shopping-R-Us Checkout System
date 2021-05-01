@@ -1,4 +1,4 @@
-"""Shopping-R-Us Checkout System"""
+"""Python-based Shopping-R-Us Checkout System"""
 
 # input products details
 ipd_price = 549.99
