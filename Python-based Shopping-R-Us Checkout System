@@ -1,0 +1,53 @@
+"""Shopping-R-Us Checkout System"""
+
+# input products details
+ipd_price = 549.99
+mbp_price = 1399.99
+atv_price = 109.50
+vga_price = 30.00
+
+
+# create a empty list that to store SKUs Scanned
+skus_scanned = []
+# then append the list with the product scanned by the machine
+"""
+skus_scanned.append('atv')
+skus_scanned.append('atv')
+skus_scanned.append('atv')
+skus_scanned.append('vga')
+"""
+
+# confirm the original amount of each product
+ipd_amount = skus_scanned.count('ipd')
+mbp_amount = skus_scanned.count('mbp')
+atv_amount = skus_scanned.count('atv')
+vga_amount = skus_scanned.count('vga')
+
+# calculate the amount of Apple TV after the opening day specials
+if atv_amount >= 3:
+    if atv_amount//3 == 0:
+        atv_amount = atv_amount/3*2
+    elif atv_amount//3 != 0:
+        atv_amount = atv_amount//3*2+atv_amount%3
+else:
+    pass
+
+# calculate the price of Super iPad after the opening day specials
+if ipd_amount > 4:
+    ipd_price = 499.99
+else:
+    pass
+
+# calculate the amount of VGA adapter based on that MacBook Pro sold
+if vga_amount == mbp_amount:
+    vga_amount = 0
+elif vga_amount > mbp_amount:
+    vga_amount = vga_amount-mbp_amount
+else:
+    vga_amount = 0
+
+
+# calculate the total cost of the scanned SKUs
+total_cost = ipd_price*ipd_amount + mbp_price*mbp_amount + atv_price*atv_amount + vga_price*vga_amount
+print('SKUs Scanned: ', skus_scanned)
+print('Total expected: $', total_cost)
