@@ -9,10 +9,14 @@ vga_price = 30.00
 
 # create a empty list that to store SKUs Scanned
 skus_scanned = []
-# then append the list with the product scanned by the machine
+# then append the list with the product according to that scanned by the machine
 """
+skus_scanned.append('ipd')
+skus_scanned.append('mbp')
 skus_scanned.append('atv')
-skus_scanned.append('atv')
+skus_scanned.append('vga')
+skus_scanned.append('ipd')
+skus_scanned.append('mbp')
 skus_scanned.append('atv')
 skus_scanned.append('vga')
 """
